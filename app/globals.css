@@ -1,0 +1,96 @@
+/* Add this at the top of your globals.css */
+:root {
+  --font-dm-sans: "DM Sans", sans-serif;
+}
+
+/* First, keep the ai-button (Send Message) styles */
+.ai-button {
+  @apply relative inline-flex items-center justify-center overflow-hidden transition-all duration-300;
+  background: hsl(var(--foreground));
+  color: hsl(var(--background));
+  border: 1px solid hsl(var(--foreground));
+}
+
+.ai-button:hover {
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.ai-button:active {
+  transform: scale(0.98);
+}
+
+.ai-button:disabled {
+  @apply opacity-50 cursor-not-allowed;
+  background: hsl(var(--muted));
+  color: hsl(var(--muted-foreground));
+  border-color: hsl(var(--muted));
+}
+
+.ai-button > * {
+  @apply relative z-10;
+}
+
+/* LinkedIn button styles */
+.linkedin-button {
+  @apply relative inline-flex items-center justify-center overflow-hidden transition-all duration-300;
+  background: linear-gradient(135deg, #0077b5 0%, #00a0dc 100%);
+  background-size: 200% 100%;
+  color: white !important;
+}
+
+.linkedin-button:hover {
+  background-position: 100% 0;
+  box-shadow: 0 0 20px rgba(0, 119, 181, 0.4);
+}
+
+.linkedin-button:active {
+  transform: scale(0.98);
+}
+
+.linkedin-button::before {
+  content: "";
+  @apply absolute inset-0 opacity-0 transition-opacity duration-300;
+  background: linear-gradient(135deg, #006699 0%, #0088cc 100%);
+}
+
+.linkedin-button:hover::before {
+  @apply opacity-100;
+}
+
+.linkedin-button > * {
+  @apply relative z-10;
+}
+
+/* Product Hunt button styles */
+.producthunt-button {
+  @apply relative inline-flex items-center justify-center overflow-hidden transition-all duration-300;
+  background: linear-gradient(135deg, #ff6154 0%, #ff8d7e 100%);
+  background-size: 200% 100%;
+  color: white !important;
+}
+
+.producthunt-button:hover {
+  background-position: 100% 0;
+  box-shadow: 0 0 20px rgba(255, 97, 84, 0.4);
+}
+
+.producthunt-button:active {
+  transform: scale(0.98);
+}
+
+.producthunt-button::before {
+  content: "";
+  @apply absolute inset-0 opacity-0 transition-opacity duration-300;
+  background: linear-gradient(135deg, #ff4433 0%, #ff7766 100%);
+}
+
+.producthunt-button:hover::before {
+  @apply opacity-100;
+}
+
+.producthunt-button > * {
+  @apply relative z-10;
+}
+
